@@ -1,0 +1,108 @@
+.nav-container{
+    margin: 0 5rem;
+    padding: 1rem 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 3rem;
+}
+
+.mobile-tab{
+    display: none;
+}
+
+.nav-menu{
+    display: inline-block;
+
+    color: var(--grayish-blue);   
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    height: 100%;
+
+}
+
+.nav-menu .animation{
+    position: absolute;
+    height: 5px;
+    bottom: 0;
+    background: var(--gradient-color);
+    z-index: -1;
+    border-radius: 12px;
+    transition: all 0.5s ease 0s;
+}
+
+a:nth-child(1){
+    width: 3rem;
+    margin: 0 1rem;
+}
+
+.nav-menu .start-home, a:nth-child(1):hover~.animation{
+    width: 5rem;
+    left: 0;
+}
+
+a:nth-child(2){
+    width: 3rem;
+    margin: 0 1rem;
+}
+.nav-menu .start-about, a:nth-child(2):hover~.animation{
+    width: 5rem;
+    left: 5rem;
+}
+
+a:nth-child(3){
+    width: 3rem;
+    margin: 0 1rem;
+}
+.nav-menu .start-contact, a:nth-child(3):hover~.animation{
+    width: 5rem;
+    left: 10rem;
+}
+
+a:nth-child(4){
+    width: 3rem;
+    margin: 0 1rem;
+}
+.nav-menu .start-blogs, a:nth-child(4):hover~.animation{
+    width: 5rem;
+    left: 15rem;
+}
+
+a:nth-child(5){
+    width: 3rem;
+    margin: 0 1rem;
+}
+.nav-menu .start-careers, a:nth-child(5):hover~.animation{
+    width: 5rem;
+    left: 20rem;
+}
+
+
+@media screen and (max-width:768px){
+    
+    .nav-container{
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-between;
+        margin: 0 2rem;
+    }
+
+    .nav-menu{
+        display: none;
+    }
+    .mobile-tab{
+        display: flex;
+        justify-content: flex-end;
+
+    }
+
+    .nav-button{
+        display: none;
+    }
+    
+}
+
